@@ -403,6 +403,34 @@ footer {
   padding: 20px 18px;
 }
 
+/* Menu Animations */
+nav ul li a {
+  display: block;
+  position: relative;
+  padding: 0.3rem 0;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1rem;
+  background: #BD3FF9;
+  background: linear-gradient(90deg, rgba(189,63,249,1) 0%, rgba(115,65,196,1) 100%);
+  opacity: 1;
+  transition: opacity 300ms, transform 300ms;
+
+  transform: scale(0);
+  transform-origin: center;
+}
+
+a:hover::after,
+a:focus::after {
+  transform: translate3d(0, 0.2em, 0);
+  transform: scale(1);
+}
 
 /* Mobile Medium View */
 @media only screen and (min-width: 375px) {
