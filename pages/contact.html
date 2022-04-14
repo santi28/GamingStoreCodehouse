@@ -38,43 +38,43 @@
         <h1>Contacto y locales</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, itaque! Natus officia harum illo minima numquam tempora aut veniam, aliquid fugit aperiam minus suscipit ipsa cupiditate debitis fugiat aspernatur eaque.</p>
       </section>
-      <div class="grid-view">
-        <section class="locales row-12">
+      <div class="grid-view row">
+        <section class="locales col-md-6 col-lg-8 pe-md-2">
           <h2>Nuestros Locales</h2>
           <div class="local_wrapper">
             <iframe class="w-100" 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.846171205912!2d-58.37246648427356!3d-34.60805116523532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a3352cbe276f75%3A0xe16921ef0545f86d!2sCasa%20Rosada!5e0!3m2!1sen!2sar!4v1646940248954!5m2!1sen!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             <div class="row pt-2">
-              <h3 class="text-center col-6">📍 Balcarce 50</h3>
-              <h3 class="text-center col-6">📞 011 4344-3600</h3>
+              <h3 class="text-center col-6 col-md-12">📍 Balcarce 50</h3>
+              <h3 class="text-center col-6 col-md-12">📞 011 4344-3600</h3>
             </div>
           </div>
           <div class="local_wrapper pt-3">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.7785825449796!2d-58.39365843427345!3d-34.6097600653258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac2cd859503%3A0x75cdafaaef2b946!2sCongreso%20de%20la%20Naci%C3%B3n%20Argentina!5e0!3m2!1sen!2sar!4v1646940486482!5m2!1sen!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.7785825449796!2d-58.39365843427345!3d-34.6097600653258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac2cd859503%3A0x75cdafaaef2b946!2sCongreso%20de%20la%20Naci%C3%B3n%20Argentina!5e0!3m2!1sen!2sar!4v1646940486482!5m2!1sen!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             <div class="row pt-2">
-              <h3 class="text-center col-6">📍 Av. Entre Ríos</h3>
-              <h3 class="text-center col-6">📞 011 4344-3699</h3>
+              <h3 class="text-center col-6 col-md-12">📍 Av. Entre Ríos</h3>
+              <h3 class="text-center col-6 col-md-12">📞 011 4344-3699</h3>
             </div>
           </div>
         </section>
-        <section class="contacto">
+        <section class="contacto pt-3 col-md-6 col-lg-4 ps-md-2">
           <h2>Consultas</h2>
-          <form>
-            <div class="input_wrapper">
-              <label for="nombre">Nombre</label>
-              <input type="text" placeholder="Josue" name="nombre" id="nombre">
+          <form class="d-flex flex-column">
+            <div class="input_wrapper mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input class="form-control" type="text" placeholder="Josue" name="nombre" id="nombre">
             </div>
-            <div class="input_wrapper">
-              <label for="email">Email</label>
-              <input type="email" placeholder="josue@gmail.com" name="email" id="email">
+            <div class="input_wrapper mb-3">
+              <label class="form-label" for="email">Email</label>
+              <input class="form-control" type="email" placeholder="josue@gmail.com" name="email" id="email">
             </div>
-            <div class="input_wrapper">
-              <label for="asunto">Asunto</label>
-              <input type="text" placeholder="Consulta por juego" name="asunto" id="asunto">
+            <div class="input_wrapper mb-3">
+              <label class="form-label" for="asunto">Asunto</label>
+              <input class="form-control" type="text" placeholder="Consulta por juego" name="asunto" id="asunto">
             </div>
-            <div class="input_wrapper">
-              <label for="console">Consola</label>
-              <select name="console" id="console">
+            <div class="input_wrapper mb-3">
+              <label class="form-label" for="console">Consola</label>
+              <select class="form-select" name="console" id="console">
                 <option value="pc">Computadora</option>
                 <option value="ps5">PlayStation 5</option>
                 <option value="ps4">PlayStation 4</option>
@@ -82,9 +82,9 @@
                 <option value="xboxone">XBox One</option>
               </select>
             </div>
-            <div class="input_wrapper">
-              <label for="game">Juego</label>
-              <select name="game" id="game">
+            <div class="input_wrapper mb-3">
+              <label class="form-label" for="game">Juego</label>
+              <select class="form-select" name="game" id="game">
                 <option value="n/a">No Aplica</option>
                 <option value="hoi4">Hearts Of Iron IV</option>
                 <option value="gta5">Grand Theft Auto 5</option>
@@ -92,7 +92,7 @@
                 <option value="citiesskylines">Cities Skylines</option>
               </select>
             </div>
-            <input type="submit" value="Enviar">
+            <input class="btn btn-primary align-self-end" type="submit" value="Enviar">
           </form>
         </section>
       </div>
