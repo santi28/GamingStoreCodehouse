@@ -1,0 +1,71 @@
+@import "../utilities/variables";
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  width: 100%;
+  padding: 15px;
+
+  background-color: $primary-black;
+
+  a {
+    img {
+      height: 65px;
+    }
+  }
+
+  nav {
+    ul {
+      display: flex;
+      gap: 20px;
+
+      li {
+        list-style: none;
+
+        a {
+          color: white;
+          text-decoration: none;
+          font-size: .75rem;
+          transition: all 0.2s;
+          display: block;
+          position: relative;
+          padding: 0.3rem 0;
+
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0.1rem;
+            background: #BD3FF9;
+            background: linear-gradient(90deg, rgba(189,63,249,1) 0%, rgba(115,65,196,1) 100%);
+            opacity: 1;
+            transition: opacity 300ms, transform 300ms;
+
+            transform: scale(0);
+            transform-origin: center;
+
+          }
+
+          &:hover::after, &:focus::after {
+            transform: translate3d(0, 0.2em, 0);
+            transform: scale(1);
+          }
+
+          @media only screen and (min-width: $moblie-md) {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: $tablet-sm) {
+    flex-direction: row;
+  }
+}
