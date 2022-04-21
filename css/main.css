@@ -50,3 +50,10 @@ header {
   @media only screen and (min-width: 768px) {
     header {
       flex-direction: row; } }
+
+footer {
+  width: 100%;
+  padding: 30px;
+  background-color: #161616;
+  text-align: center;
+  color: #fff; }
