@@ -32,6 +32,9 @@
       grid-template-columns: repeat(12, 1fr);
       gap: 15px;
 
+      padding-bottom: 20px;
+      border-bottom: 2px solid #e0e0e0;
+
       .articles__list__item__info {
         grid-column: 1/-1;
 
@@ -40,6 +43,8 @@
         flex-direction: column;
 
         .articles__list__item__info__header {
+          display: flex;
+          flex-direction: row;
           background-color: unset;
 
           padding: 0;
@@ -98,6 +103,10 @@
         .articles__list__item__multimedia {
           grid-column: 9/13;
         }
+      }
+
+      &:last-child {
+        border-bottom: unset;
       }
     }
 

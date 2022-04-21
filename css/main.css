@@ -143,13 +143,17 @@ header {
       min-height: 200px;
       display: grid;
       grid-template-columns: repeat(12, 1fr);
-      gap: 15px; }
+      gap: 15px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #e0e0e0; }
       .articles .articles__list .articles__list__item .articles__list__item__info {
         grid-column: 1/-1;
         display: flex;
         gap: 5px;
         flex-direction: column; }
         .articles .articles__list .articles__list__item .articles__list__item__info .articles__list__item__info__header {
+          display: flex;
+          flex-direction: row;
           background-color: unset;
           padding: 0;
           width: 100%; }
@@ -190,6 +194,8 @@ header {
           grid-column: 1/9; }
         .articles .articles__list .articles__list__item .articles__list__item__multimedia {
           grid-column: 9/13; } }
+      .articles .articles__list .articles__list__item:last-child {
+        border-bottom: unset; }
     @media only screen and (min-width: 768px) {
       .articles .articles__list {
         grid-column: 1/9; } }
