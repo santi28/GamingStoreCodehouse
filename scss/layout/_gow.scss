@@ -33,16 +33,23 @@
         flex-direction: row;
         gap: 10px;
 
-        overflow: scroll;
+        overflow: auto;
 
         .gow__information__text__tags__tag {
+          width: 100%;
           font-size: .875rem;
           font-weight: 700;
           white-space: nowrap;
           padding: 5px 25px;
           border-radius: 10px;
           color: white;
+          text-align: center;
           background-color: $secondary-violet;
+        }
+
+        @media only screen and (min-width: $tablet-sm) {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
         }
       }
 

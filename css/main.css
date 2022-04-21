@@ -79,15 +79,21 @@ header {
         display: flex;
         flex-direction: row;
         gap: 10px;
-        overflow: scroll; }
+        overflow: auto; }
         .gow .gow__information .gow__information__text .gow__information__text__tags .gow__information__text__tags__tag {
+          width: 100%;
           font-size: .875rem;
           font-weight: 700;
           white-space: nowrap;
           padding: 5px 25px;
           border-radius: 10px;
           color: white;
+          text-align: center;
           background-color: #7341c4; }
+        @media only screen and (min-width: 768px) {
+          .gow .gow__information .gow__information__text .gow__information__text__tags {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); } }
       @media only screen and (min-width: 768px) {
         .gow .gow__information .gow__information__text {
           width: 50%; } }
