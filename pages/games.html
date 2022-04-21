@@ -126,7 +126,32 @@
           <img class="articles__list__item__multimedia" src="../img/gta5.jpg" alt="Cities Skylines">
         </article>
       </section>
-      <form class="articles__filter"></form>
+      <form class="articles__filter">
+        <input class="articles__filter__search" type="search" placeholder="Buscar...">
+        <select class="articles__filter__sort" name="order" id="order">
+          <option value="">Ordenar por</option>
+          <option value="">Precio</option>
+          <option value="">Alfabético</option>
+        </select>
+        <label class="articles__filter__category">
+          <input type="checkbox" name="action" id="action">
+          <span>Acción</span>
+        </label>
+        <label class="articles__filter__category">
+          <input type="checkbox" name="adventure" id="adventure">
+          <span>Aventura</span>
+        </label>
+        <label class="articles__filter__category">
+          <input type="checkbox" name="rpg" id="rpg">
+          <span>RPG</span>
+        </label>
+        <label class="articles__filter__category">
+          <input type="checkbox" name="simulation" id="simulation">
+          <span>Simulación</span>
+        </label>
+        <input class="articles__filter__deletebtn" type="reset" value="Borrar">
+        <input class="articles__filter__searchbtn" type="submit" value="Buscar">
+      </form>
     </main>
     <footer>
       <span>Todos los derechos reservados a TheGamingStore.io</span>
