@@ -1,0 +1,47 @@
+.articles {
+  background-color: red;
+
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(12, 1fr);
+
+  margin: auto;
+  width: 100%;
+  max-width: 1050px;
+  padding: 20px 25px;
+
+  .articles__list {
+    grid-column: 1/-1;
+
+    background-color: blue;
+    width: 100%;
+    min-height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .articles__list__item {
+      background-color: yellow;
+      width: 100%;
+      min-height: 200px;
+    }
+
+    @media only screen and (min-width: $tablet-sm) {
+      grid-column: 1/9;
+    }
+  }
+
+  .articles__filter {
+    grid-row: 1;
+    grid-column: 1/-1;
+
+    background-color: green;
+    width: 100%;
+    min-height: 200px;
+    
+    @media only screen and (min-width: $tablet-sm) {
+      grid-column: 9/13;
+    }
+  }
+}

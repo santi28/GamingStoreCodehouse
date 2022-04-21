@@ -58,10 +58,10 @@ header {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 20px 25px;
   margin: auto;
   width: 100%;
-  max-width: 1050px; }
+  max-width: 1050px;
+  padding: 20px 25px; }
   .gow .gow__information {
     display: flex;
     flex-direction: column;
@@ -118,6 +118,40 @@ header {
       .gow .gow__images {
         overflow: scroll;
         flex-direction: row; } }
+
+.articles {
+  background-color: red;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(12, 1fr);
+  margin: auto;
+  width: 100%;
+  max-width: 1050px;
+  padding: 20px 25px; }
+  .articles .articles__list {
+    grid-column: 1/-1;
+    background-color: blue;
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; }
+    .articles .articles__list .articles__list__item {
+      background-color: yellow;
+      width: 100%;
+      min-height: 200px; }
+    @media only screen and (min-width: 768px) {
+      .articles .articles__list {
+        grid-column: 1/9; } }
+  .articles .articles__filter {
+    grid-row: 1;
+    grid-column: 1/-1;
+    background-color: green;
+    width: 100%;
+    min-height: 200px; }
+    @media only screen and (min-width: 768px) {
+      .articles .articles__filter {
+        grid-column: 9/13; } }
 
 footer {
   width: 100%;
