@@ -123,10 +123,14 @@ header {
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: max-content;
   margin: auto;
   width: 100%;
   max-width: 1050px;
   padding: 20px 25px; }
+  .articles h1 {
+    grid-column: 1/-1;
+    font-size: 1.8rem; }
   .articles .articles__list {
     grid-column: 1/-1;
     width: 100%;
@@ -135,7 +139,6 @@ header {
     flex-direction: column;
     gap: 20px; }
     .articles .articles__list .articles__list__item {
-      background-color: yellow;
       width: 100%;
       min-height: 200px;
       display: grid;
@@ -143,25 +146,44 @@ header {
       gap: 15px; }
       .articles .articles__list .articles__list__item .articles__list__item__info {
         grid-column: 1/-1;
-        background-color: antiquewhite;
         display: flex;
         gap: 5px;
         flex-direction: column; }
         .articles .articles__list .articles__list__item .articles__list__item__info .articles__list__item__info__header {
-          background-color: lightblue;
-          width: 100%;
-          min-height: 50px; }
+          background-color: unset;
+          padding: 0;
+          width: 100%; }
+          .articles .articles__list .articles__list__item .articles__list__item__info .articles__list__item__info__header span {
+            font-size: .85rem;
+            font-weight: bold;
+            background-color: #7341c4;
+            padding: 5px 10px;
+            border-radius: 10px;
+            color: white; }
         .articles .articles__list .articles__list__item .articles__list__item__info .articles__list__item__info__tags {
-          background-color: lightgreen;
           width: 100%;
-          min-height: 50px; }
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+          overflow: auto; }
+          .articles .articles__list .articles__list__item .articles__list__item__info .articles__list__item__info__tags span {
+            width: 100%;
+            font-size: .875rem;
+            font-weight: 700;
+            white-space: nowrap;
+            padding: 5px 25px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+            background-color: #7341c4; }
         .articles .articles__list .articles__list__item .articles__list__item__info .articles__list__item__info__paragraph {
-          background-color: lightpink;
           width: 100%;
           min-height: 50px; }
       .articles .articles__list .articles__list__item .articles__list__item__multimedia {
         grid-column: 1/-1;
-        background-color: aqua;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
         min-height: 200px; }
       @media only screen and (min-width: 768px) {
         .articles .articles__list .articles__list__item .articles__list__item__info {
@@ -172,7 +194,7 @@ header {
       .articles .articles__list {
         grid-column: 1/9; } }
   .articles .articles__filter {
-    grid-row: 1;
+    grid-row: 2;
     grid-column: 1/-1;
     background-color: green;
     width: 100%;
