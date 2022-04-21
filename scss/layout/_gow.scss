@@ -16,6 +16,42 @@
     flex-direction: column;
     gap: 10px;
 
+    .gow__information__text {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .gow__information__text__title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: $primary-violet;
+      }
+
+      .gow__information__text__tags {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        overflow: scroll;
+
+        .gow__information__text__tags__tag {
+          font-size: .875rem;
+          font-weight: 700;
+          white-space: nowrap;
+          padding: 5px 25px;
+          border-radius: 10px;
+          color: white;
+          background-color: $secondary-violet;
+        }
+      }
+    }
+
+    .gow__information__video {
+      width: 100%;
+      aspect-ratio: 16/9;
+    }
+
     @media only screen and (min-width: $tablet-sm) {
       flex-direction: row;
     }
@@ -30,10 +66,6 @@
       flex-direction: row;
     }
   }
-}
-
-iframe {
-  width: 100%;
 }
 
 .gow__images__image {
