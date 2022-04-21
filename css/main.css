@@ -51,6 +51,35 @@ header {
     header {
       flex-direction: row; } }
 
+.gow {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 25px;
+  margin: auto;
+  width: 100%;
+  max-width: 1050px; }
+  .gow .gow__information {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; }
+    @media only screen and (min-width: 768px) {
+      .gow .gow__information {
+        flex-direction: row; } }
+  .gow .gow__images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; }
+    @media only screen and (min-width: 768px) {
+      .gow .gow__images {
+        flex-direction: row; } }
+
+iframe {
+  width: 100%; }
+
+.gow__images__image {
+  width: 100%; }
+
 footer {
   width: 100%;
   padding: 30px;
