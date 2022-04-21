@@ -120,7 +120,6 @@ header {
         flex-direction: row; } }
 
 .articles {
-  background-color: red;
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(12, 1fr);
@@ -130,7 +129,6 @@ header {
   padding: 20px 25px; }
   .articles .articles__list {
     grid-column: 1/-1;
-    background-color: blue;
     width: 100%;
     min-height: 200px;
     display: flex;
@@ -139,7 +137,37 @@ header {
     .articles .articles__list .articles__list__item {
       background-color: yellow;
       width: 100%;
-      min-height: 200px; }
+      min-height: 200px;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 15px; }
+      .articles .articles__list .articles__list__item .articles__list__item__info {
+        grid-column: 1/-1;
+        background-color: antiquewhite;
+        display: flex;
+        gap: 5px;
+        flex-direction: column; }
+        .articles .articles__list .articles__list__item .articles__list__item__info .articles__list__item__info__header {
+          background-color: lightblue;
+          width: 100%;
+          min-height: 50px; }
+        .articles .articles__list .articles__list__item .articles__list__item__info .articles__list__item__info__tags {
+          background-color: lightgreen;
+          width: 100%;
+          min-height: 50px; }
+        .articles .articles__list .articles__list__item .articles__list__item__info .articles__list__item__info__paragraph {
+          background-color: lightpink;
+          width: 100%;
+          min-height: 50px; }
+      .articles .articles__list .articles__list__item .articles__list__item__multimedia {
+        grid-column: 1/-1;
+        background-color: aqua;
+        min-height: 200px; }
+      @media only screen and (min-width: 768px) {
+        .articles .articles__list .articles__list__item .articles__list__item__info {
+          grid-column: 1/9; }
+        .articles .articles__list .articles__list__item .articles__list__item__multimedia {
+          grid-column: 9/13; } }
     @media only screen and (min-width: 768px) {
       .articles .articles__list {
         grid-column: 1/9; } }
