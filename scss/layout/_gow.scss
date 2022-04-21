@@ -45,6 +45,10 @@
           background-color: $secondary-violet;
         }
       }
+
+      @media only screen and (min-width: $tablet-sm) {
+        width: 50%;
+      }
     }
 
     .gow__information__video {
@@ -62,12 +66,19 @@
     flex-direction: column;
     gap: 10px;
 
+    .gow__images__image {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+
+      @media only screen and (min-width: $tablet-sm) {
+        width: 320px;
+      }
+    }
+    
     @media only screen and (min-width: $tablet-sm) {
+      overflow: scroll;
       flex-direction: row;
     }
   }
-}
-
-.gow__images__image {
-  width: 100%;
 }
