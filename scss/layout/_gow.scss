@@ -1,4 +1,5 @@
 @import "../utilities/variables";
+@import "../utilities/mixins";
 
 .gow {
   display: flex;
@@ -28,12 +29,7 @@
       }
 
       .gow__information__text__tags {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-
-        overflow: auto;
+        @include tags_wrapper;
 
         .gow__information__text__tags__tag {
           width: 100%;
@@ -47,13 +43,13 @@
           background-color: $secondary-violet;
         }
 
-        @media only screen and (min-width: $tablet-sm) {
+        @media only screen and (min-width: map-get($map: $sizes, $key: tablet-sm)) {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
         }
       }
 
-      @media only screen and (min-width: $tablet-sm) {
+      @media only screen and (min-width: map-get($map: $sizes, $key: tablet-sm)) {
         width: 50%;
       }
     }
@@ -63,7 +59,7 @@
       aspect-ratio: 16/9;
     }
 
-    @media only screen and (min-width: $tablet-sm) {
+    @media only screen and (min-width: map-get($map: $sizes, $key: tablet-sm)) {
       flex-direction: row;
     }
   }
@@ -78,12 +74,12 @@
       aspect-ratio: 16/9;
       object-fit: cover;
 
-      @media only screen and (min-width: $tablet-sm) {
+      @media only screen and (min-width: map-get($map: $sizes, $key: tablet-sm)) {
         width: 320px;
       }
     }
     
-    @media only screen and (min-width: $tablet-sm) {
+    @media only screen and (min-width: map-get($map: $sizes, $key: tablet-sm)) {
       overflow: scroll;
       flex-direction: row;
     }

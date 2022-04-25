@@ -1,3 +1,6 @@
+@import "../utilities/mixins";
+@import "../utilities/variables";
+
 .articles {
   display: grid;
   gap: 20px;
@@ -51,32 +54,20 @@
           width: 100%;
 
           span {
-            font-size: .85rem;
-            font-weight: bold;
-            background-color: $secondary-violet;
-            padding: 5px 10px;
-            border-radius: 10px;
-            color: white;
+            @extend %tag_style;
           }
         }
 
         .articles__list__item__info__tags {
-          width: 100%;
-          display: flex;
-          flex-direction: row;
-          gap: 10px;
-          overflow: auto;
+          @include tags_wrapper;
 
           span {
+            @extend %tag_style;
+
             width: 100%;
-            font-size: .875rem;
-            font-weight: 700;
             white-space: nowrap;
-            padding: 5px 25px;
-            border-radius: 10px;
-            color: white;
             text-align: center;
-            background-color: $secondary-violet;
+            font-size: .875rem;
           }
         }
 
@@ -95,7 +86,7 @@
         min-height: 200px;
       }
 
-      @media only screen and (min-width: $tablet-sm) {
+      @media only screen and (min-width: map-get($map: $sizes, $key: tablet-sm)) {
         .articles__list__item__info {
           grid-column: 1/9;
         }
@@ -110,7 +101,7 @@
       }
     }
 
-    @media only screen and (min-width: $tablet-sm) {
+    @media only screen and (min-width: map-get($map: $sizes, $key: tablet-sm)) {
       grid-column: 1/9;
     }
   }
@@ -170,7 +161,7 @@
       grid-column: 5/9;
     }
 
-    @media only screen and (min-width: $tablet-sm) {
+    @media only screen and (min-width: map-get($map: $sizes, $key: tablet-sm)) {
       position: sticky;
       top: 20px;
       grid-column: 9/13;

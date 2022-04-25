@@ -7,6 +7,14 @@
 body main {
   min-height: calc(100vh - 101px - 83px); }
 
+.articles .articles__list .articles__list__item .articles__list__item__info .articles__list__item__info__header span, .articles .articles__list .articles__list__item .articles__list__item__info .articles__list__item__info__tags span {
+  font-size: .85rem;
+  font-weight: bold;
+  background-color: #7341c4;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: white; }
+
 header {
   display: flex;
   flex-direction: column;
@@ -53,6 +61,14 @@ header {
   @media only screen and (min-width: 768px) {
     header {
       flex-direction: row; } }
+
+.articles .articles__list .articles__list__item .articles__list__item__info .articles__list__item__info__header span, .articles .articles__list .articles__list__item .articles__list__item__info .articles__list__item__info__tags span {
+  font-size: .85rem;
+  font-weight: bold;
+  background-color: #7341c4;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: white; }
 
 .gow {
   display: flex;
@@ -119,6 +135,14 @@ header {
         overflow: scroll;
         flex-direction: row; } }
 
+.articles .articles__list .articles__list__item .articles__list__item__info .articles__list__item__info__header span, .articles .articles__list .articles__list__item .articles__list__item__info .articles__list__item__info__tags span {
+  font-size: .85rem;
+  font-weight: bold;
+  background-color: #7341c4;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: white; }
+
 .articles {
   display: grid;
   gap: 20px;
@@ -157,13 +181,6 @@ header {
           background-color: unset;
           padding: 0;
           width: 100%; }
-          .articles .articles__list .articles__list__item .articles__list__item__info .articles__list__item__info__header span {
-            font-size: .85rem;
-            font-weight: bold;
-            background-color: #7341c4;
-            padding: 5px 10px;
-            border-radius: 10px;
-            color: white; }
         .articles .articles__list .articles__list__item .articles__list__item__info .articles__list__item__info__tags {
           width: 100%;
           display: flex;
@@ -172,14 +189,9 @@ header {
           overflow: auto; }
           .articles .articles__list .articles__list__item .articles__list__item__info .articles__list__item__info__tags span {
             width: 100%;
-            font-size: .875rem;
-            font-weight: 700;
             white-space: nowrap;
-            padding: 5px 25px;
-            border-radius: 10px;
-            color: white;
             text-align: center;
-            background-color: #7341c4; }
+            font-size: .875rem; }
         .articles .articles__list .articles__list__item .articles__list__item__info .articles__list__item__info__paragraph {
           width: 100%;
           min-height: 50px; }

@@ -57,7 +57,7 @@ header {
             transform: scale(1);
           }
 
-          @media only screen and (min-width: $moblie-md) {
+          @media only screen and (min-width: map-get($map: $sizes, $key: mobile-md)) {
             font-size: 1rem;
           }
         }
@@ -65,7 +65,7 @@ header {
     }
   }
 
-  @media only screen and (min-width: $tablet-sm) {
+  @media only screen and (min-width: map-get($map: $sizes, $key: tablet-sm)) {
     flex-direction: row;
   }
 }

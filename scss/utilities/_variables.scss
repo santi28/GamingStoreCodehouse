@@ -3,5 +3,16 @@ $secondary-violet: rgba(115,65,196,1);
 $primary-black: #161616;
 
 // Viewport Sizes
-$moblie-md: 375px;
-$tablet-sm: 768px;
+$sizes: (
+  mobile-md: 375px,
+  tablet-sm: 768px,
+);
+
+%tag_style {
+  font-size: .85rem;
+  font-weight: bold;
+  background-color: $secondary-violet;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: white;
+}
